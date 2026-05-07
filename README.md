@@ -11,11 +11,26 @@ This is a simple user management system built with **Node.js**, **Express**, **S
 3. **Cross‑Site Scripting (XSS)** – user comments are stored & rendered unsanitised.
 4. **Broken Access Control** – any logged‑in user can access the admin panel.
 5. **Missing Encryption** – the app runs on plain HTTP and uses an insecure session secret.
- # Secure Web Application – User Management System
 
-> A production‑ready web application demonstrating **secure coding practices** including protection against SQL injection, XSS, weak password storage, broken access control, and missing encryption.
+ 
+ ### For macOS / Linux
+1. **download the repository** and open a terminal in the project folder: cd ~/Desktop/vulnerable-webapp
+2. **Install dependencies**: npm install
+3. **Initialise the database**: npm run init-db
+4. **Start the secure server**: npm start
+5. *Open your browser and go to* **https://localhost:3000**
 
-##  Project Overview
+### For Windows 
+1. Open Command Prompt or PowerShell as Administrator and **navigate to the project folder**: cd C:\Users\YourName\Desktop\vulnerable-webapp
+2. **Install dependencies**: npm install
+3. **Initialise the database**: npm run init-db
+4. **Start the secure server**: npm start
+5. *Open your browser and go to* **https://localhost:3000**
+
+
+ 
+ # Secure Web Application 
+
 
 This is a **fully secured** user management system built with **Node.js**, **Express**, **SQLite**, and **EJS**. It was developed as a final project for a security course. All common vulnerabilities have been identified and fixed using industry‑standard techniques.
 
@@ -29,5 +44,25 @@ This is a **fully secured** user management system built with **Node.js**, **Exp
 | **Broken Access Control** | **Role‑based middleware** (`requireAdmin`) restricts the `/admin` route to users with `role = 'admin'`. |
 | **Missing Encryption** | The app is configured to run over **HTTPS** (TLS/SSL) with a self‑signed certificate for development; session cookies are marked `secure: true`. |
 
-##  Project Structure
+##Setup & Run Instructions
+- **Node.js** (v14 or later) and **npm** – [Download](https://nodejs.org/)
+### For macOS / Linux
+1. **download the repository** and open a terminal in the project folder: cd ~/Desktop/secure-webapp
+2. **Install dependencies**: npm install
+3. **Initialise the database**: npm run init-db
+4. **Start the secure server**: npm start
+5. *Open your browser and go to* **https://localhost:3000**
+
+### For Windows 
+1. Open Command Prompt or PowerShell as Administrator and **navigate to the project folder**: cd C:\Users\YourName\Desktop\secure-webapp
+2. **Install dependencies**: npm install
+3. **Initialise the database**: npm run init-db
+4. **Start the secure server**: npm start
+5. *Open your browser and go to* **https://localhost:3000**
+
+
+
+
+>  Port 3000 already in use? Change the port in app.js (last line) to something like 3443 and update the URL accordingly.
+
 
