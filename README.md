@@ -65,8 +65,8 @@ This is a **fully secured** user management system built with **Node.js**, **Exp
 5. *Open your browser and go to* **https://localhost:3000**
 
 
-#How to test:
-1. **SQL Injection Prevention**
+# How to test:
+1.  # **SQL Injection Prevention**
 Try entering SQL payloads in the login page such as: ' OR 1=1 --
 ### Expected result for a secure web application:
 The system should not return all records
