@@ -66,17 +66,17 @@ This is a **fully secured** user management system built with **Node.js**, **Exp
 
 
 # How to test:
-1.  ## **SQL Injection Prevention**
+## **1. SQL Injection Prevention**
 Try entering SQL payloads in the login page such as: ' OR 1=1 --
 ### Expected result for a secure web application:
 The system should not return all records
 The query should be safely rejected or sanitized
-2. ## **XSS Protection**
+## **2. XSS Protection**
 Try injecting a script in Commment section: <script>alert('XSS')</script>
 ### Expected result for a secure web application:
 The script should not execute
 The text should appear as plain text
-3. ## **Authentication & Session Security**
+## **3. Authentication & Session Security**
 ### How to test:
 Try logging in with invalid credentials repeatedly
 Check that session cookies are regenerated after login
