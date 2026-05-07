@@ -55,7 +55,6 @@ This is a **fully secured** user management system built with **Node.js**, **Exp
 1. **download the repository** and open a terminal in the project folder: cd ~/Desktop/secure-webapp *You can change the navigation to any folder or directory where the project files exist*
 2. **Install dependencies**: npm install
 3. **Initialise the database**: npm run init-db
-4. **load environment variables**: npm install dotnev
 5. **Start the secure server**: npm start
 6. *Open your browser and go to* **https://localhost:3000**
 
