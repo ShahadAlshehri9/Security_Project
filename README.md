@@ -26,7 +26,8 @@ This is a simple user management system built with **Node.js**, **Express**, **S
 ### For Windows 
 1. Open Command Prompt or PowerShell as Administrator and **navigate to the project folder**: cd C:\Users\YourName\Desktop\vulnerable-webapp
 2. **Uninstall dependencies**: npm uninstall sqlite3
-3.  **Install dependencies**: npm install sqlite3 
+3. **Install dependencies**: npm install sqlite3
+4. **Initialise the database**: npm run init-db
 5. **Start the secure server**: npm start
 6. *Open your browser and go to* **https://localhost:3000**
 
