@@ -17,14 +17,14 @@ This is a simple user management system built with **Node.js**, **Express**, **S
 ##Setup & Run Instructions
  - For first time you must download **Node.js** (v14 or later) and **npm** – [Download](https://nodejs.org/)
  ### For macOS / Linux
-1. **download the repository** and open a terminal in the project folder: cd ~/Desktop/vulnerable-webapp
+1. **download the repository** and open a terminal in the project folder: cd ~/Desktop/vulnerable-webapp *You can change the navigation to any folder or directory where the project files exist*
 2. **Install dependencies**: npm install
 3. **Initialise the database**: npm run init-db
 4. **Start the secure server**: npm start
 5. *Open your browser and go to* **http://localhost:3000**
 
 ### For Windows 
-1. Open Command Prompt or PowerShell as Administrator and **navigate to the project folder**: cd C:\Users\YourName\Desktop\vulnerable-webapp
+1. Open Command Prompt or PowerShell as Administrator and **navigate to the project folder**: cd C:\Users\YourName\Desktop\vulnerable-webapp *You can change the navigation to any folder or directory where the project files exist*
 2. **Uninstall dependencies**: npm uninstall sqlite3
 3. **Install dependencies**: npm install sqlite3
 5. **Initialise the database**: npm run init-db
@@ -52,7 +52,7 @@ This is a **fully secured** user management system built with **Node.js**, **Exp
  - You must download **Node.js** (v14 or later) and **npm** – [Download](https://nodejs.org/)
 
 ### For macOS / Linux
-1. **download the repository** and open a terminal in the project folder: cd ~/(Location of Project)/secure-webapp
+1. **download the repository** and open a terminal in the project folder: cd ~/Desktop/secure-webapp *You can change the navigation to any folder or directory where the project files exist*
 2. **Install dependencies**: npm install
 3. **Initialise the database**: npm run init-db
 4. **load environment variables**: npm install dotnev
@@ -60,7 +60,7 @@ This is a **fully secured** user management system built with **Node.js**, **Exp
 6. *Open your browser and go to* **https://localhost:3000**
 
 ### For Windows 
-1. Open Command Prompt or PowerShell as Administrator and **navigate to the project folder**: cd C:\Users\YourName\Desktop\secure-webapp
+1. Open Command Prompt or PowerShell as Administrator and **navigate to the project folder**: cd C:\Users\YourName\Desktop\secure-webapp *You can change the navigation to any folder or directory where the project files exist*
 2. **Uninstall dependencies**: npm uninstall sqlite3
 3. **Install dependencies**: npm install sqlite3
 4. **load environment variables**: npm install dotnev
