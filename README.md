@@ -25,13 +25,13 @@ This is a simple user management system built with **Node.js**, **Express**, **S
 
 ### For Windows 
 1. Open Command Prompt or PowerShell as Administrator and **navigate to the project folder**: cd C:\Users\YourName\Desktop\vulnerable-webapp
-2. **Install dependencies**: npm install
-3. **Initialise the database**: npm run init-db
-4. **Start the secure server**: npm start
-5. *Open your browser and go to* **https://localhost:3000**
+2. **Uninstall dependencies**: npm uninstall sqlite3
+3.  **Install dependencies**: npm install sqlite3 
+5. **Start the secure server**: npm start
+6. *Open your browser and go to* **https://localhost:3000**
 
 
- 
+
  # Secure Web Application 
 
 
@@ -59,8 +59,8 @@ This is a **fully secured** user management system built with **Node.js**, **Exp
 
 ### For Windows 
 1. Open Command Prompt or PowerShell as Administrator and **navigate to the project folder**: cd C:\Users\YourName\Desktop\secure-webapp
-2. **Install dependencies**: npm install
-3. **Initialise the database**: npm run init-db
+2. **Uninstall dependencies**: npm uninstall sqlite3
+3.  **Install dependencies**: npm install sqlite3 
 4. **Start the secure server**: npm start
 5. *Open your browser and go to* **https://localhost:3000**
 
@@ -68,22 +68,24 @@ This is a **fully secured** user management system built with **Node.js**, **Exp
 #How to test:
 1. **SQL Injection Prevention**
 Try entering SQL payloads in the login page such as: ' OR 1=1 --
-###Expected result for a secure web application:
+### Expected result for a secure web application:
 The system should not return all records
 The query should be safely rejected or sanitized
 2. **XSS Protection**
 Try injecting a script in Commment section: <script>alert('XSS')</script>
-###Expected result for a secure web application:
+### Expected result for a secure web application:
 The script should not execute
 The text should appear as plain text
 3. **Authentication & Session Security**
-###How to test:
+### How to test:
 Try logging in with invalid credentials repeatedly
 Check that session cookies are regenerated after login
 Ensure no sensitive data appears in URLs
 
 
 
->  **NOTE:** Port 3000 already in use? Change the port in app.js (last line) to something like 3443 and update the URL accordingly.
+>  **NOTES:**
+>  Port 3000 already in use? Change the port in app.js (last line) to something like 3443 and update the URL accordingly.
+>  We recommend using google chorme rather than Safari on macOS for testing, as Safari enforces stricter certificate validation.
 
 
