@@ -21,15 +21,15 @@ This is a simple user management system built with **Node.js**, **Express**, **S
 2. **Install dependencies**: npm install
 3. **Initialise the database**: npm run init-db
 4. **Start the secure server**: npm start
-5. *Open your browser and go to* **https://localhost:3000**
+5. *Open your browser and go to* **http://localhost:3000**
 
 ### For Windows 
 1. Open Command Prompt or PowerShell as Administrator and **navigate to the project folder**: cd C:\Users\YourName\Desktop\vulnerable-webapp
 2. **Uninstall dependencies**: npm uninstall sqlite3
 3. **Install dependencies**: npm install sqlite3
-4. **Initialise the database**: npm run init-db
-5. **Start the secure server**: npm start
-6. *Open your browser and go to* **https://localhost:3000**
+5. **Initialise the database**: npm run init-db
+6. **Start the secure server**: npm start
+7. *Open your browser and go to* **http://localhost:3000**
 
 
 
@@ -52,18 +52,20 @@ This is a **fully secured** user management system built with **Node.js**, **Exp
  - You must download **Node.js** (v14 or later) and **npm** – [Download](https://nodejs.org/)
 
 ### For macOS / Linux
-1. **download the repository** and open a terminal in the project folder: cd ~/Desktop/secure-webapp
+1. **download the repository** and open a terminal in the project folder: cd ~/(Location of Project)/secure-webapp
 2. **Install dependencies**: npm install
 3. **Initialise the database**: npm run init-db
-4. **Start the secure server**: npm start
-5. *Open your browser and go to* **https://localhost:3000**
+4. **load environment variables**: npm install dotnev
+5. **Start the secure server**: npm start
+6. *Open your browser and go to* **https://localhost:3000**
 
 ### For Windows 
 1. Open Command Prompt or PowerShell as Administrator and **navigate to the project folder**: cd C:\Users\YourName\Desktop\secure-webapp
 2. **Uninstall dependencies**: npm uninstall sqlite3
-3.  **Install dependencies**: npm install sqlite3 
-4. **Start the secure server**: npm start
-5. *Open your browser and go to* **https://localhost:3000**
+3. **Install dependencies**: npm install sqlite3
+4. **load environment variables**: npm install dotnev
+5. **Start the secure server**: npm start
+6. *Open your browser and go to* **https://localhost:3000**
 
 
 # How to test:
@@ -76,7 +78,7 @@ The query should be safely rejected or sanitized
 Try injecting a script in Commment section: <script>alert('XSS')</script>
 ### Expected result for a secure web application:
 The script should not execute
-The text should appear as plain text
+The text should appear as plain text Comment 
 ## **3. Authentication & Session Security**
 ### How to test:
 Try logging in with invalid credentials repeatedly
