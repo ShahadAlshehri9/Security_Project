@@ -14,7 +14,7 @@ This is a simple user management system built with **Node.js**, **Express**, **S
 5. **Missing Encryption** – the app runs on plain HTTP and uses an insecure session secret.
 
 
-##Setup & Run Instructions
+## Setup & Run Instructions
  - For first time you must download **Node.js** (v14 or later) and **npm** – [Download](https://nodejs.org/)
  ### For macOS / Linux
 1. **download the repository** and open a terminal in the project folder: cd ~/Desktop/vulnerable-webapp *You can change the navigation to any folder or directory where the project files exist*
@@ -48,7 +48,7 @@ This is a **fully secured** user management system built with **Node.js**, **Exp
 | **Broken Access Control** | **Role‑based middleware** (`requireAdmin`) restricts the `/admin` route to users with `role = 'admin'`. |
 | **Missing Encryption** | The app is configured to run over **HTTPS** (TLS/SSL) with a self‑signed certificate for development; session cookies are marked `secure: true`. |
 
-##Setup & Run Instructions
+## Setup & Run Instructions
  - You must download **Node.js** (v14 or later) and **npm** – [Download](https://nodejs.org/)
 
 ### For macOS / Linux
