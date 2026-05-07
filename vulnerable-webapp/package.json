@@ -1,0 +1,17 @@
+{
+  "name": "vulnerable-webapp",
+  "version": "1.0.0",
+  "description": "Insecure web app for security demonstration",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "init-db": "node initDb.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "sqlite3": "^5.1.6",
+    "ejs": "^3.1.9",
+    "body-parser": "^1.20.2"
+  }
+}

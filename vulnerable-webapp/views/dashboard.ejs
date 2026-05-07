@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    /* extra style for comments section */
+    .comments-section {
+      margin-top: 32px;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+    }
+    .comment-form textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      background: rgba(0,0,0,0.25);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .comment {
+      background: rgba(0,0,0,0.2);
+      padding: 12px;
+      margin: 12px 0;
+      border-radius: 8px;
+    }
+    .comment strong { color: var(--accent-1); }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="dashboard-header">
+      <h1 id="greeting">Welcome, <%= username %>!</h1>
+      <button class="logout-btn" onclick="window.location.href='/logout'">Log out</button>
+    </div>
+
+    <div class="profile">
+      <div class="avatar" id="avatar"><%= username.charAt(0).toUpperCase() %></div>
+      <div class="profile-info">
+        <h2 id="displayName"><%= fullName %></h2>
+        <p id="displayEmail"><%= email %></p>
+      </div>
+    </div>
+
+    <div class="details-grid">
+      <div class="detail-card"><div class="label">Username</div><div class="value"><%= username %></div></div>
+      <div class="detail-card"><div class="label">Full Name</div><div class="value"><%= fullName %></div></div>
+      <div class="detail-card"><div class="label">Email</div><div class="value"><%= email %></div></div>
+      <div class="detail-card"><div class="label">Age</div><div class="value"><%= age %></div></div>
+      <div class="detail-card"><div class="label">Account Created</div><div class="value"><%= new Date(created_at).toLocaleString() %></div></div>
+    </div>
+
+    <!-- XSS Vulnerable Comment Section -->
+    <div class="comments-section">
+      <h3>Comments (XSS vulnerable)</h3>
+      <form class="comment-form" method="POST" action="/comment">
+        <textarea name="comment" rows="3" placeholder="Write a comment... (try <script>alert('XSS')</script>)"></textarea>
+        <button type="submit" class="btn" style="margin-top: 12px;">Post Comment</button>
+      </form>
+      <div id="commentList">
+        <% comments.forEach(c => { %>
+          <div class="comment">
+            <strong><%= c.username %></strong> said:<br>
+            <!-- VULNERABLE: unescaped output -->
+            <%- c.comment %>
+            <small><%= new Date(c.created_at).toLocaleString() %></small>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

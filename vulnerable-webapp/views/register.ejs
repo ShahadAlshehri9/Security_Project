@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="auth-card">
+    <div class="user-circle">
+      <img src="/user-icon.png" alt="User icon" onerror="this.style.display='none'" />
+    </div>
+    <h1>Create Account</h1>
+    <p class="subtitle">Fill in your details to get started</p>
+
+    <% if (error) { %>
+      <div class="message error"><%= error %></div>
+    <% } %>
+
+    <form method="POST" action="/register" autocomplete="off">
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" minlength="3" required />
+      </div>
+      <div class="field">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="field">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="13" max="120" required />
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" minlength="6" required />
+      </div>
+      <div class="field">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" required />
+      </div>
+      <button type="submit" class="btn">Create Account</button>
+    </form>
+    <p class="switch-link">Already have an account? <a href="/login">Log in</a></p>
+  </div>
+</body>
+</html>
