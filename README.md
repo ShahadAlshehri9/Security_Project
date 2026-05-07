@@ -15,7 +15,7 @@ This is a simple user management system built with **Node.js**, **Express**, **S
 
 
 ##Setup & Run Instructions
- - You must download **Node.js** (v14 or later) and **npm** – [Download](https://nodejs.org/)
+ - For first time you must download **Node.js** (v14 or later) and **npm** – [Download](https://nodejs.org/)
  ### For macOS / Linux
 1. **download the repository** and open a terminal in the project folder: cd ~/Desktop/vulnerable-webapp
 2. **Install dependencies**: npm install
