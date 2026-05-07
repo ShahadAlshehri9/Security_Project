@@ -1,10 +1,11 @@
 # Security_Project
-# Vulnerable Web Application – Security Project
+# Vulnerable Web Application 
 
 
 ##  Project Overview
 
 This is a simple user management system built with **Node.js**, **Express**, **SQLite**, and **EJS**. It was created for security project to demonstrate five common vulnerabilities:
+
 
 1. **SQL Injection (SQLi)** – in login and registration forms.
 2. **Weak Password Storage** – passwords hashed with MD5 (broken & guessable).
