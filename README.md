@@ -82,7 +82,19 @@ The text should appear as plain text Comment
 Try logging in with invalid credentials repeatedly
 Check that session cookies are regenerated after login
 Ensure no sensitive data appears in URLs
+## **4.⁠ ⁠Broken Access Control**
 
+### How to test: 
+Log in as a regular user and try going to http://localhost:3000/admin
+### Expected result:
+You should see the 403 Forbidden page, not the admin panel
+
+## **5.⁠ ⁠Weak Password Storage**
+
+### How to test:
+Register a new user, then open app.db using SQLite Viewer and check the password column
+### Expected result:
+Password should appear as a long bcrypt hash starting with $2b$12$... instead of a short MD5 string
 
 
 > ### **NOTES:**
